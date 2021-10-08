@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="icons/icons8-chat-bubble-128.png" alt="logo" width="35px">
+                <h1>Chat App</h1>
+            </div>
+            <button type="button" onclick="show_hide()">
+                <img src="icons/icons8-menu-48.png" alt="button-img" width="50px">
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4>3</h4>
+                </div>
+                <div class="users-list">
+                    <p>Jarvis</p>
+                    <p>Ultron</p>
+                    <p>Friday</p>
+                </div>
+            </div>
+            <div class="chat-window">
+                <div class="chats">
+                    <div class="user-join">
+                        <p><b>Jarvis</b> joined</p>
+                    </div>
+                    <div class="message incoming">
+                        <h5>Jarvis</h5>
+                        <p>Hello Ultron</p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>Ultron</h5>
+                        <p>Hello Friday</p>
+                    </div>
+                </div>
+                <div class="user-input">
+                    <input type="text" placeholder="Type your message">
+                    <button>SEND</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let uwindow = document.getElementsByClassName('users-window')[0];
+        // let uwindow = document.querySelector('.users-window');
+        function show_hide(){
+            if(uwindow.style.display == 'block')
+                uwindow.style.display = 'none';
+            else
+                uwindow.style.display = 'block';
+        }
+
+        window.addEventListener("resize", function(event) {
+            if(document.body.clientWidth > 900)
+                uwindow.style.display = 'block';
+            else
+                uwindow.style.display = 'none';
+            // console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+        })
+    </script>
+</body>
+</html>
