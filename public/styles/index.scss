@@ -19,6 +19,9 @@ $fsize: 16px;
     padding: 0;
     box-sizing: border-box;
     font-family: $font-text;
+    ::-webkit-scrollbar{
+        display: none;
+    }
 }
 
 main{
@@ -88,8 +91,9 @@ main{
             border-radius: 10px;
 
             div.chats{
-                min-height: 65vh;
+                height: 65vh;
                 padding: 20px;
+                overflow-y: auto;
                 div.user-join{
                     font-size: 0.9rem;
                     color: $dark-grey;

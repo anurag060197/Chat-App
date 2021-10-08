@@ -6,6 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+* ::-webkit-scrollbar {
+  display: none;
+}
+
 main {
   position: absolute;
   top: 50%;
@@ -129,8 +133,9 @@ main div.container div.chat-window {
 }
 
 main div.container div.chat-window div.chats {
-  min-height: 65vh;
+  height: 65vh;
   padding: 20px;
+  overflow-y: auto;
 }
 
 main div.container div.chat-window div.chats div.user-join {
