@@ -4,12 +4,15 @@ let username;
 let chats = document.querySelector(".chats");
 let user_list = document.querySelector(".users-list");
 let user_count = document.querySelector(".users-count");
+let user_name = document.querySelector(".users-name");
 let msg_send = document.querySelector("#user-btn");
 let user_msg = document.querySelector("#user-msg");
 
 do{
     username = prompt("Enter your name...");
 }while(!username);
+
+user_name.innerHTML = `People (${username})`
 
 socket.emit("new-user-joined", username);
 
