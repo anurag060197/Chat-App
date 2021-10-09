@@ -41,7 +41,8 @@ socket.on("user-list", (users)=>{
     user_count.innerHTML = arr.length;
 })
 
-msg_send.addEventListener('click', ()=>{
+msg_send.addEventListener('click', (e)=>{
+    e.preventDefault();
     let data = {
         user: username,
         msg: user_msg.value

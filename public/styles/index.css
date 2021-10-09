@@ -22,8 +22,8 @@ main {
 }
 
 main header {
-  background-color: #3c5c56;
-  color: white;
+  background-color: #314e49;
+  color: #ffffff;
   padding: 7px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,8 +152,8 @@ main div.container div.chat-window div.chats div.user-join {
 }
 
 main div.container div.chat-window div.chats div.message {
-  background-color: #ffffff;
-  color: #3f3f3f;
+  background-color: #6b6b6b;
+  color: #ffffff;
   padding: 5px 15px;
   max-width: 400px;
   margin-bottom: 15px;
@@ -165,7 +165,7 @@ main div.container div.chat-window div.chats div.message p {
 }
 
 main div.container div.chat-window div.chats div.outgoing {
-  background-color: #3c5c56;
+  background-color: #19725c;
   color: #ffffff;
   margin-left: auto;
   border-radius: 50px 10px 10px 50px;
@@ -200,7 +200,7 @@ main div.container div.chat-window div.user-input input {
 }
 
 main div.container div.chat-window div.user-input button {
-  background-color: #3c5c56;
+  background-color: #314e49;
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;

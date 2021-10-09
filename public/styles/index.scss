@@ -1,4 +1,6 @@
-$dark-green: rgb(60, 92, 86);
+$dark-green: rgb(49, 78, 73);
+$light-green: rgb(25, 114, 92);
+$slaty: rgb(107, 107, 107);
 $light-grey: #7E878c;
 $dark-grey: #3f3f3f;
 $white: #ffffff;
@@ -35,7 +37,7 @@ main{
 
     header{
         background-color: $dark-green;
-        color: white;
+        color: $white;
         padding: 7px 20px;
         @include flexing(row, space-between, center);
  
@@ -105,8 +107,8 @@ main{
                     margin-bottom: 15px;
                 }
                 div.message{
-                    background-color: $white;
-                    color: $dark-grey;
+                    background-color: $slaty;
+                    color: $white;
                     padding: 5px 15px;
                     max-width: 400px;
                     margin-bottom: 15px;
@@ -116,7 +118,7 @@ main{
                     }
                 }
                 div.outgoing{
-                    background-color: $dark-green;
+                    background-color: $light-green;
                     color: $white;
                     margin-left: auto;
                     border-radius: 50px 10px 10px 50px;
