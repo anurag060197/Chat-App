@@ -1,4 +1,4 @@
-$light-blue: #2791cf;
+$dark-green: rgb(60, 92, 86);
 $light-grey: #7E878c;
 $dark-grey: #3f3f3f;
 $white: #ffffff;
@@ -34,7 +34,7 @@ main{
     border-radius: 10px;
 
     header{
-        background-color: $light-blue;
+        background-color: $dark-green;
         color: white;
         padding: 7px 20px;
         @include flexing(row, space-between, center);
@@ -116,7 +116,7 @@ main{
                     }
                 }
                 div.outgoing{
-                    background-color: $light-blue;
+                    background-color: $dark-green;
                     color: $white;
                     margin-left: auto;
                     border-radius: 50px 10px 10px 50px;
@@ -137,7 +137,7 @@ main{
                     border-radius: 50px 0 0 50px;
                 }
                 button{
-                    background-color: $light-blue;
+                    background-color: $dark-green;
                     color: $white;
                     font-size: $fsize;
                     font-weight: 600;
