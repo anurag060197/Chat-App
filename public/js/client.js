@@ -69,12 +69,10 @@ function appendMessage(data, status){
 }
 
 socket.on("message", (data, status)=>{
-    // console.log(data);
     appendMessage(data, status);
 })
 
 socket.on("load messages", (results)=>{
-    console.log(results);
     results.forEach(data=>{
         if(data.status === 'Joined'){
             userJoinLeft(data.username, "joined");
