@@ -24,7 +24,7 @@ socket.on("user-disconnected", (socket_name)=>{
     userJoinLeft(socket_name, "left");
 })
 
-function userJoinLeft(name,status){
+function userJoinLeft(name, status){
     let div = document.createElement("div");
     div.classList.add("user-join");
     let content = `<p><b>${name} </b>${status}</p>`;
@@ -51,24 +51,42 @@ msg_send.addEventListener('click', (e)=>{
         msg: user_msg.value
     };
     if(user_msg.value != ''){
-        appendMessage(data, "outgoing");
         socket.emit("message", data)
         user_msg.value = "";
     }
 })
 
-function appendMessage(data,status){
+function appendMessage(data, status){
     let div = document.createElement("div");
     div.classList.add("message", status);
     let content = `
-        <h5>${data.user}</h5>
-        <p>${data.msg}</p>
+        <h5>${data.username}</h5>
+        <p>${data.message}</p>
     `;
     div.innerHTML = content;
     chats.appendChild(div);
     chats.scrollTop = chats.scrollHeight;
 }
 
-socket.on("message", (data)=>{
-    appendMessage(data, 'incoming');
+socket.on("message", (data, status)=>{
+    // console.log(data);
+    appendMessage(data, status);
+})
+
+socket.on("load messages", (results)=>{
+    console.log(results);
+    results.forEach(data=>{
+        if(data.status === 'Joined'){
+            userJoinLeft(data.username, "joined");
+        }
+        else if(data.status === 'Left'){
+            userJoinLeft(data.username, "left");
+        }
+        else{
+            if(data.username === username)
+                appendMessage(data, 'outgoing');
+            else
+                appendMessage(data, 'incoming');
+        }
+    })
 })
